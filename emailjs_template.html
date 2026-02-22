@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .content {
+            padding: 40px;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .greeting {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .credentials-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 24px;
+            margin: 30px 0;
+        }
+
+        .credential-item {
+            margin-bottom: 12px;
+        }
+
+        .credential-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #64748b;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .credential-value {
+            font-size: 16px;
+            font-weight: 500;
+            color: #0f172a;
+        }
+
+        .password {
+            font-family: monospace;
+            font-size: 18px;
+            color: #2563eb;
+            background: #eff6ff;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .footer {
+            background-color: #f8fafc;
+            padding: 20px 40px;
+            text-align: center;
+            color: #64748b;
+            font-size: 13px;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to EduNexis</h1>
+        </div>
+
+        <div class="content">
+            <div class="greeting">Hello {{to_name}},</div>
+
+            <p>An administrative account has been explicitly provisioned for you at <strong>{{org_name}}</strong> within
+                the EduNexis Academic Operating System.</p>
+
+            <p>To ensure security and compliance, you have been issued a temporary password. You will be mandated to
+                configure a permanent secure password upon your first successful login.</p>
+
+            <div class="credentials-box">
+                <div class="credential-item">
+                    <div class="credential-label">Institution</div>
+                    <div class="credential-value">{{org_name}}</div>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-label">Login Email</div>
+                    <div class="credential-value">{{to_email}}</div>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-label">Temporary Password</div>
+                    <div class="credential-value password">{{password}}</div>
+                </div>
+            </div>
+
+            <p>Please access your dashboard using the link below:</p>
+
+            <div class="button-container">
+                <!-- Assuming localhost:3000 or the production domain. Update if needed. -->
+                <a href="http://localhost:3000/login" class="button">Access EduNexis Dashboard</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>This is an automated compliance message from the EduNexis Operating System.</p>
+            <p>&copy; 2026 EduNexis Framework. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

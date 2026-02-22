@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+pydantic-settings
+supabase
+firebase-admin
+python-jose[cryptography]
+httpx
+python-multipart
+reportlab
